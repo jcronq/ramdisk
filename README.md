@@ -7,13 +7,13 @@ The 'easy-way' is to make use of the unix filesystem tmpfs.  (could also use ram
 
 Run locally (on a unix-like machine).
 
-cd easy-way
-./local_validate.sh
+```bash
+cd easy-way && ./local_validate.sh
+```
 
 Run in a docker instance (on a unix-like machine).
-
-cd easy-way
-./docker_validate.sh
-
+```bash
+cd easy-way && ./docker_validate.sh
+```
 
 
