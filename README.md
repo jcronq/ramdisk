@@ -9,7 +9,7 @@ Filesystems are hard.  One should not attempt to reinvent the wheel whenever pos
 
 **REQUIREMENTS:** Access to a linux machine with root permissions (need to be able to call mount/umount).
 
-###Implementation
+**Implementation**
 Use the linux 'tmpfs' mount.  Use type 'ramfs' if you don't want to bound your memory usage.
 
 To run locally you will need a linux machine (virtual machine OK).
