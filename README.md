@@ -5,7 +5,7 @@ Design and implement an in-memory file system. This file-system consists of 4
 types of entities: Drives, Folders, Text files, Zip files.
 
 ## The Easy Way (Optimal Solution)
-Filesystems are hard.  One should not attempt to reinvent the wheel whenever possible, especialy so when that wheel is something that has taken decades to get right.  I cannot recommended enough using available tools to satisfy a requirement whenever possible.
+Filesystems are hard.  One should not attempt to reinvent the wheel whenever possible, especialy so when that wheel is something that has taken decades to get right.
 
 **REQUIREMENTS:** Access to a linux machine with root permissions (need to be able to call mount/umount).
 
