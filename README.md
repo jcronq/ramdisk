@@ -12,12 +12,15 @@ Use the linux mount type 'tmpfs'.  Use type 'ramfs' if you don't want to bound y
 To run locally you will need a linux machine (virtual machine OK).
 
 ```bash
-cd easy_way && ./local_validate.sh
+git clone https://github.com/jcronq/ramdisk.git
+cd ramdisk/easy_way && ./local_validate.sh
 ```
 
 Run in a docker instance you will need a linux machine with docker installed.
 ```bash
-cd easy_way && ./docker_validate.sh
+# Assumption here is you didn't just download and run the local version. 
+https://github.com/jcronq/ramdisk.git
+cd ramdisk/easy_way && ./docker_validate.sh
 ```
 
 ## How it might be created in code
