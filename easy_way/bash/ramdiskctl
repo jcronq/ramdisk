@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [ -z $2 ]; then
+    diskloc="/mnt/ramdisk"
+else
+    diskloc="$2"
+fi
+
+if [[ -z $1 || $1 == *"help"* || $1 == "-h" ]]; then
+    echo "ramdiskctl [command] <disklocation>"
+    echo "command:"
+    echo "  - start : mounts the ramdisk at [disklocation]"
+    echo "  - stop  : unmounts the ramdisk"
+    echo "  - test  : Runs a speed test agains the ramdisk."
+    echo "disklocation: (optional)"
+    echo "  - The directory where the ramdisk should be mounted"
+    echo "    default: /mnt/ramdisk"
+    exit 1
+elif [ "$1" == "start" ]; then
+    echo "mounting ramdisk at path $diskloc"
+    mount -t tmpfs -o size=1024m myramdisk "$diskloc"
+elif [ "$1" == "stop" ]; then
+    umount "$diskloc"   
+    echo "unmounting ramdisk at path $diskloc"
+elif [ "$1" == "test" ]; then
+    dd if=/dev/zero of="$diskloc/test" bs=4k count=200000
+    rm "$diskloc/test"
+else
+    echo "Error: command not found"
+    echo "    ramdiskctl --help"
+fi
+

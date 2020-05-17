@@ -1,0 +1,11 @@
+#!/bin/bash
+
+finish () {
+    echo "Docker stopping"
+    exit 0
+}
+
+trap finish SIGTERM SIGINT SIGQUIT
+
+ramdiskctl test
+

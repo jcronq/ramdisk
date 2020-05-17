@@ -6,8 +6,7 @@ WORKDIR /scripts
 ENV PATH="/usr/bin:/scripts:${PATH}"
 
 COPY run /scripts
+COPY bash/ramdiskctl /scripts
 RUN chmod 755 /scripts/*
-
-VOLUME /mnt/ramdisk
 
 CMD ["run"] 
