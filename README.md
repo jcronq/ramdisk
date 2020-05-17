@@ -7,7 +7,7 @@ types of entities: Drives, Folders, Text files, Zip files.
 ## The Easy Way (Optimal Solution)
 Filesystems are hard.  One should not attempt to reinvent the wheel whenever possible, especialy so when that wheel is something that has taken decades to get right.
 
-**REQUIREMENTS:** Access to a linux machine with root permissions (need to be able to call mount/umount).
+**REQUIREMENTS:** Access to a linux machine (makes use of the linux 'mount' command). Root access is required for running local instance (need to be able to call mount/umount).
 
 **Implementation**
 Use the linux 'tmpfs' mount.  Use type 'ramfs' if you don't want to bound your memory usage.
