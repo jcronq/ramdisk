@@ -31,6 +31,24 @@ https://github.com/jcronq/ramdisk.git
 cd ramdisk/easy_way && ./docker_validate.sh
 ```
 
+Or... just create a tmpfs directly!
+
+```bash
+# Mount the in-memory disk
+sudo mkdir /mnt/ramdisk
+sudo mount -t tmpfs -o size=1024m ramdisk /mnt/ramdisk
+
+# Test to make sure it's in-memory
+# ... via direct observation
+mount | grep ramdisk
+
+# ... via speed test.  It's in-memory if you get more than 2GB/s
+sudo dd -if=/dev/zero of=/mnt/ramdisk bs=4k count=200000
+
+# Don't forget to clean-up when you're done
+sudo umount /mnt/ramdisk
+```
+
 ## How it might be created in code
 It's assumed that the reason for this request is to test coding skills.  So now I'll demonstrate how this system would be designed assuming no ram-disk tools are available for one reason or another. 
 
