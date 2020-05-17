@@ -4,14 +4,13 @@
 Design and implement an in-memory file system. This file-system consists of 4
 types of entities: Drives, Folders, Text files, Zip files.
 
-## The Easy Way (also the most correct way)
-Create a full featured file system in-memory.
+## The Easy Way (Optimal Solution)
+Filesystems are hard.  One should not attempt to reinvent the wheel whenever possible, especialy so when that wheel is something that has taken decades to get right.  I cannot recommended enough using available tools to satisfy a requirement whenever possible.
 
-Filesystems are hard.  One should not attempt to reinvent the wheel whenever possible.  Using available tools to create the desired behaviour is highly recommended. 
+**REQUIREMENTS:** Access to a linux machine with root permissions (need to be able to call mount/umount).
 
-REQUIREMENTS: access to a linux machine with root permissions (need to be able to call mount/umount)
-
-Use the linux mount type 'tmpfs'.  Use type 'ramfs' if you don't want to bound your memory usage.
+###Implementation
+Use the linux 'tmpfs' mount.  Use type 'ramfs' if you don't want to bound your memory usage.
 
 To run locally you will need a linux machine (virtual machine OK).
 
@@ -22,7 +21,7 @@ git clone https://github.com/jcronq/ramdisk.git
 cd ramdisk/easy_way && ./local_validate.sh
 ```
 
-Run in a docker instance you will need a linux machine with docker installed.
+Run in a docker instance you will need a linux machine with docker installed (virtual machine OK).
 ```bash
 # root access required.  If not super-user add sudo when calling ./local_validate.sh
 #
@@ -37,6 +36,6 @@ It's assumed that the reason for this request is to test coding skills.  So now 
 
 Pending...
 
--Design
--Sketch of "move" flow
--Implement size function
+- Design
+- Sketch of "move" flow
+- Implement size function
