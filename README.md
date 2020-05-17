@@ -1,19 +1,25 @@
-# ramdisk
-Creates a ramdisk
+# In-Memory Filesystem
+## Objective
 
-Creating an in-memory file system.  
+Design and implement an in-memory file system. This file-system consists of 4
+types of entities: Drives, Folders, Text files, Zip files.
 
-The 'easy-way' is to make use of the unix filesystem tmpfs.  (could also use ramfs, but this gives unlimited access to memory)
+## The Easy Way
+Create a full featured file system in-memory.
 
-Run locally (on a unix-like machine).
+Use the linux mount type 'tmpfs'.  Use type 'ramfs' if you don't want to bound your memory usage.
+
+To run locally you will need a linux machine (virtual machine OK).
 
 ```bash
 cd easy_way && ./local_validate.sh
 ```
 
-Run in a docker instance (on a unix-like machine).
+Run in a docker instance you will need a linux machine with docker installed.
 ```bash
 cd easy_way && ./docker_validate.sh
 ```
 
+## How it might be created in code
+TBD
 
