@@ -1,0 +1,5 @@
+
+DIRECTORY = 0
+DOCUMENT  = 1
+ZIP       = 2
+DRIVE     = 4
