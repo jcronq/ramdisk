@@ -50,6 +50,8 @@ def move(source, target):
     source_directory = source_inode.get_parent().get_file()
 
     target_parent_inode = get_inode(target_path[:-1])
+    if target_parent_inode.get_type() is not node_type.DIRECTORY:
+        raise exceptions.NOT_A_DIRECTORY('/' + '/'.join(target_path[:-1]))
     target_directory = target_parent_inode.get_file()
     target_fname = target_path[-1]
 
