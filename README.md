@@ -52,7 +52,7 @@ sudo umount /mnt/ramdisk
 ## How it might be created in code
 It's assumed that the reason for this request is to test coding skills.  So now I'll demonstrate how this system would be designed assuming no ram-disk tools are available for one reason or another. 
 
-Pending...
+Tasks Completed ([see InMemoryFS]: https://github.com/jcronq/ramdisk/tree/master/InMemoryFS)
 
 - Design
 - Sketch of "move" flow
