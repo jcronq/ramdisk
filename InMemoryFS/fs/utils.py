@@ -15,7 +15,10 @@ def get_inode(source_path):
     current_inode = Root.inode()
 
     for path_part in source_path:
-        current_inode = current_inode.get_file().get_child(path_part)
+        try:
+            current_inode = current_inode.get_file().get_child(path_part)
+        except: 
+            raise exceptions.DIRECTORY_NOT_FOUND()
 
         if current_inode is None:
             return None
