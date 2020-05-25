@@ -24,7 +24,7 @@ class Directory(File):
         if len(self._children) <= 0:
             return 0
         
-        children_sizes = [child.size() for child in self._children.items()]
+        children_sizes = [child.size() for name, child in self._children.items()]
         return reduce(add, children_sizes)
 
     def clone(self):
